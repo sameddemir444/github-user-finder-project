@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Github User Searcher</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background">
+    <!-- 1) Header Part  -->
+    <header class="border-b-2 py-3 bg-header fixed top-0 w-full z-50">
+      <!-- General Container  -->
+      <div
+        class="container flex items-center flex-col sm:flex-row gap-2 md:gap-0 justify-center md:justify-between"
+      >
+        <!-- a) Logo / Title Part  -->
+        <div class="flex flex-col items-start px-4">
+          <div class="flex items-center gap-3 mb-1">
+            <a href="index.html">
+              <img
+                src="/src/images/githublogo.png"
+                alt="githublogo"
+                class="h-7"
+              />
+            </a>
+            <a href="index.html">
+              <h1 class="text-2xl md:text-3xl font-gemunu font-semibold">
+                Github User Finder
+              </h1>
+            </a>
+          </div>
+          <h3 class="text-sm md:text-base">
+            Browse users and their profiles via the
+            <a
+              href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
+              class="text-alertGreen font-medium text-sm md:text-base"
+              target="_blank"
+              >GitHub API</a
+            >
+          </h3>
+        </div>
+
+        <!-- b) Nav / Search Part -->
+        <form
+          id="searchForm"
+          method="get"
+          class="w-full sm:w-auto sm:flex sm:justify-end px-4"
+        >
+          <div class="relative">
+            <input
+              type="text"
+              name="searchInput"
+              id="searchInput"
+              placeholder="Search for a user, e.g. sameddemir"
+              class="py-2 px-4 w-full sm:w-80 md:w-96 rounded-2xl border focus:outline-none focus:ring-1 focus:ring-hover text-sm md:text-base"
+              autocomplete="off"
+            />
+            <ion-icon
+              name="search-outline"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            ></ion-icon>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <!-- 2) Main Part  -->
+    <main id="main-element"></main>
+
+    <!-- 3) Footer Part  -->
+    <footer class="border-t-2 py-1 bg-header fixed bottom-0 w-full">
+      <!-- General Container -->
+      <div class="container mx-auto px-4 flex items-center justify-between">
+        <p class="text-xs md:text-sm font-medium">
+          View the
+          <a href="#" class="text-alertGreen font-medium">source on GitHub</a>
+        </p>
+
+        <p class="text-xs md:text-sm font-medium">developed by Samed Demir</p>
+      </div>
+    </footer>
+
+    <script src="/src/ui.js"></script>
+    <script src="/src/githubapi.js"></script>
+    <script src="/src/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
